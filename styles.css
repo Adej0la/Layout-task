@@ -176,7 +176,7 @@ h2 {
 
 .button {
   background-color: var(--clr-neutral-200);
-  border: 0;
+  border: 2px solid var(--clr-neutral-200);
   border-radius: var(--space-s-m);
   padding-block: var(--space-3xs-2xs);
   padding-inline: var(--space-xs-s);
@@ -194,8 +194,20 @@ h2 {
   color: var(--clr-pry-300);
 }
 .button[data-state="inverted"] {
-  background: black;
+  background-color: black;
   color: white;
+}
+.button[data-state="inverted"]:hover {
+  border-color: black;
+  color: black;
+  background-color: var(--clr-neutral-200);
+  transition: color 100ms ease-in, background-color 50ms ease-in-out;
+}
+
+.copy > .button:hover {
+  background-color: transparent;
+  color: var(--clr-neutral-200);
+  transition: color 100ms ease-in, background-color 50ms ease-in;
 }
 
 /* Grid.html */
